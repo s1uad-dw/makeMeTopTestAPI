@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "galaxyId": {
+        "type": "number"
+      },
+      "galaxyName": {
+        "type": "string"
+      },
+      "galaxyDescription": {
+        "type": "string"
+      },
+      "systemCount": {
+        "type": "number"
+      },
+      "explorerCount": {
+        "type": "number"
+      },
+      "explorers": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "personId": {
+              "type": "number"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "patronymic": {
+              "type": "string"
+            },
+            "rating": {
+              "type": "number"
+            },
+            "systems": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          },
+          "required": [
+            "personId",
+            "firstName",
+            "lastName",
+            "patronymic",
+            "rating",
+            "systems"
+          ]
+        }
+      },
+      "keeperCount": {
+        "type": "number"
+      },
+      "keepers": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "personId": {
+              "type": "number"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "patronymic": {
+              "type": "string"
+            },
+            "rating": {
+              "type": "number"
+            },
+            "systems": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          },
+          "required": [
+            "personId",
+            "firstName",
+            "lastName",
+            "patronymic",
+            "rating",
+            "systems"
+          ]
+        }
+      }
+    },
+    "required": [
+      "galaxyId",
+      "galaxyName",
+      "galaxyDescription",
+      "systemCount",
+      "explorerCount",
+      "explorers",
+      "keeperCount",
+      "keepers"
+    ]
+  }
+}

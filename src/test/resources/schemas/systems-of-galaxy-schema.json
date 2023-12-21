@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "galaxyId": {
+      "type": "number"
+    },
+    "galaxyName": {
+      "type": "string"
+    },
+    "galaxyDescription": {
+      "type": "string"
+    },
+    "orbitList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "orbitId": {
+            "type": "number"
+          },
+          "orbitLevel": {
+            "type": "number"
+          },
+          "systemCount": {
+            "type": "number"
+          },
+          "galaxyId": {
+            "type": "number"
+          },
+          "systemList": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "systemId": {
+                  "type": "number"
+                },
+                "systemName": {
+                  "type": "string"
+                },
+                "systemLevel": {
+                  "type": "number"
+                },
+                "systemPosition": {
+                  "type": "number"
+                },
+                "orbitId": {
+                  "type": "number"
+                },
+                "systemDependencyList": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "systemId": {
+                        "type": "number"
+                      },
+                      "systemName": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "isAlternative": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "systemId",
+                      "systemName",
+                      "type",
+                      "isAlternative"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "systemId",
+                "systemName",
+                "systemLevel",
+                "systemPosition",
+                "orbitId",
+                "systemDependencyList"
+              ]
+            }
+          }
+        },
+        "required": [
+          "orbitId",
+          "orbitLevel",
+          "systemCount",
+          "galaxyId",
+          "systemList"
+        ]
+      }
+    }
+  },
+  "required": [
+    "galaxyId",
+    "galaxyName",
+    "galaxyDescription",
+    "orbitList"
+  ]
+}
